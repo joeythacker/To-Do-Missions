@@ -1,0 +1,20 @@
+from logging import root
+import tkinter as tk
+
+class todo:
+    def __init__(self, root):
+        self.root = root
+        self.root.title("To-Do List")
+        self.root.geometry("650x410+300+150")
+
+        self.label = tk.Label(self.root, text="To-Do Missons", 
+            font= "georgia, 23 bold",width=10, bd=5, bg='green', fg='black')
+        self.label.pack(side='top', fill= tk.BOTH)
+
+def main():
+    root=tk.Tk()
+    ui = todo(root)
+    root.mainloop()
+
+if __name__ == "__main__":
+    main()
